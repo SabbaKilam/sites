@@ -88,7 +88,6 @@ function processCsv(rawData){
             e.trim();
         })
         pureRecords.sort();
-        pureRecords.reverse();
         show(pureRecords);
     }
     //----------------------------------------------
@@ -422,10 +421,7 @@ function processCsv(rawData){
                 inGroups = true;
             }//==END of groupThem()==
         //-------------------------------------
-        
-        
-        //-------------------------------------
-        
+
         //---last statement of setEventHandlers calls callback:----
         if(callback){callback();}
     }//==END setEventHandlers()==
