@@ -254,6 +254,9 @@ function processCsv(rawData){
                     }
                     S("note").visibility = "visible";
                     O("note").focus();
+                    //===========blur background??=====
+                    blurBackground();
+                    //===================================
                 }                
             },false);
         });
@@ -275,15 +278,20 @@ function processCsv(rawData){
             S(noteHolder).zIndex = -1;
             S(noteHolder).visibility = "hidden";
             S("note").visibility = "hidden";
+            sharpenBackground();
          });
-         O("noteHolder").addEventListener("click",saveNote);
+         O("noteHolder").addEventListener("click", function(){
+             saveNote();
+             sharpenBackground();
+         });
          //--------
          function saveNote(){
             cardDeck[parseInt(O("note").getAttribute("data-id"))].note = O("note").value;
             O("note").setAttribute("data-id","");
             S(noteHolder).zIndex = -1;
             S(noteHolder).visibility = "hidden";
-            S("note").visibility = "hidden"; 
+            S("note").visibility = "hidden";
+            sharpenBackground();   
          }
         //==========================================   
         O("stack").addEventListener("click", function(){
@@ -347,7 +355,8 @@ function processCsv(rawData){
         } );
         //---------------------------------------
         O("btnRefresh").addEventListener("click",function(){
-            if(window.localStorage){localStorage.clear()}
+            var clearStorage = confirm("Okay to remove notes too?");            
+            if(clearStorage && window.localStorage){localStorage.clear()}
             document.location.assign("");
         } );        
         //----------------------------------
@@ -515,4 +524,30 @@ function px(obj){
     return obj + "px"
 }
 //////////////////////////////////////
+function sharpenBackground(){
+    S("groups").webkitFilter = "none";
+    S("groups").mozFilter = "none";
+    S("groups").oFilter = "none";
+    S("groups").msFilter = "none";
+    S("groups").filter = "none"; 
 
+    S("content").webkitFilter = "none";
+    S("content").mozFilter = "none";
+    S("content").oFilter = "none";
+    S("content").msFilter = "none";
+    S("content").filter = "none";
+}
+//-------------------------------------
+function blurBackground(){
+    S("groups").webkitFilter = "blur(2px)";
+    S("groups").mozFilter ="blur(2px)";
+    S("groups").oFilter = "blur(2px)";
+    S("groups").msFilter = "blur(2px)";
+    S("groups").filter = "blur(2px)";
+
+    S("content").webkitFilter = "blur(2px)";
+    S("content").mozFilter = "blur(2px)";
+    S("content").oFilter = "blur(2px)";
+    S("content").msFilter = "blur(2px)";
+    S("content").filter = "blur(2px)";
+}

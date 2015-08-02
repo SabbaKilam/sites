@@ -79,6 +79,9 @@ h1 .control:active{
     color: red;
 }
 
+#title{
+    cursor: pointer;
+}
 #stack{
     right: 20%;
 }
@@ -138,14 +141,21 @@ h1 .control:active{
 }
 #noteHolder{
     position: absolute;
-    background: rgba(0,0,0,0.35);
+    background: rgba(128,128,128,0.3);   
     visibility: hidden;
 }
 #note{
     position: absolute;
     visibility: hidden;
-    background: white;
+    #background: rgb(42,42,60);
+    background: -webkit-radial-gradient(rgb(95,95,120), rgb(35,35,50)); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(rgb(95,95,120), rgb(35,35,50)); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(rgb(95,95,120),rgb(35,35,50)); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(rgb(95,95,120), rgb(35,35,50)); /* Standard syntax */    
+    color: white;
     border-radius: 8px;
+    border: 1px solid black;
+    padding: 1%;
 }
 
 .card{
@@ -156,20 +166,6 @@ h1 .control:active{
     -o-transition: z-index 0.15s;
     -ms-transition: z-index 0.15s;
     transition: z-index 0.15s;
-    
-    /*    
-    -webkit-transition: top 0.1s;
-    -moz-transition: top 0.1s;
-    -o-transition: top 0.1s;
-    -ms-transition: top 0.1s;
-    transition: top 0.1s;
-
-    -webkit-transition: left 0.01s;
-    -moz-transition: left 0.01s;
-    -o-transition: left 0.01s;
-    -ms-transition: left 0.01s;
-    transition: left 0.01s;
-    */
     
     color: white;
     
