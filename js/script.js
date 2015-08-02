@@ -362,7 +362,7 @@ function processCsv(rawData){
         O("group").addEventListener("click", function(){
             inMotion = false;
             fastSlow();            
-            O("stack").click();
+            O("stack").click();//looks a mess without first "stackin''em":research!
             S("groups").visibility = "visible";
             groupThem();
         });
@@ -412,7 +412,14 @@ function processCsv(rawData){
                                 cardDeck.forEach(function(p,k,c){
                                     if( p.group ===  n){p.y = p.y + (1.5)*cardHeight;}
                                 })
-                                S(m.card).top = px(m.y);
+                                if(m.group === "GEN"){
+                                    //because there are more "general" websites ...
+                                    //stack them more tightly
+                                    S(m.card).top = px(0.88*m.y);                                     
+                                }
+                                else{
+                                    S(m.card).top = px(m.y);                                    
+                                }
                             }
                         })
                     });
