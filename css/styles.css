@@ -1,0 +1,185 @@
+/**
+*   Author: Abbas Abdulmalik
+*   Creation Date: July 29, 2015
+*   Purpose: Links to Site for web developers
+*   Modified: August 2, 2015
+*   Notes:
+*
+*/
+html{
+    height: 100%;
+    width: 100%;
+    
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;    
+    user-select: none;
+    
+    background: -webkit-radial-gradient(rgb(95,95,120), rgb(35,35,50)); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(rgb(95,95,120), rgb(35,35,50)); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(rgb(95,95,120),rgb(35,35,50)); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(rgb(95,95,120), rgb(35,35,50)); /* Standard syntax */
+    
+    /*
+    background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#484848;
+    background-size:16px 16px;
+    */    
+}
+body{
+    height: 100%;
+    width: 100%;
+
+}
+h1{
+    position: relative;
+    background-color:  hsla(203, 86%, 42%, 0.9); 
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: white;    
+}
+#tagline{
+    display: inline-block;
+    font-style: italic;
+    font-size: 1rem;
+    color: white;
+    vertical-align: center;
+}
+
+h1 .control{
+    display: inline-block;
+    position: absolute;
+    margin-top: 5px;
+    font-style: italic;
+    color: black;
+    background: white;
+    right: 1.5%;
+    font-size: 1.1rem;
+    font-weight: normal;
+    padding: 0.15%;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid hsla(203, 86%, 42%, 1.00);
+}
+
+h1 .control:hover{
+    color: white;
+    background: black;
+    z-index: 1;
+}
+
+h1 .control:active{
+    color: red;
+}
+
+#stack{
+    right: 20%;
+}
+#spread{
+    right: 10.5%;
+}
+#group{
+    right: 2%;
+}
+
+.btn{
+    position: absolute;
+    bottom: 0;
+    color:white;
+    background: green;
+    font-size: 1rem;
+    font-style: italic;    
+    border-radius: 0.2rem;
+    padding: 0.2rem;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    border-radius: 5px;    
+    visibility: hidden;    
+}
+.btn:hover{
+    color: green;
+    background: white;
+}
+.btn:active{
+    color: red;
+}
+.btn:visited{
+    color:white;
+}
+
+#btnRefresh{
+    visibility: visible;    
+    opacity: 0;
+    right:0;
+}
+#content{
+    position: relative;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+#groups{
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+    padding: 0.5%;
+    text-align: center;
+    color: white;
+    visibility: hidden;   
+}
+#noteHolder{
+    position: absolute;
+    background: rgba(0,0,0,0.35);
+    visibility: hidden;
+}
+#note{
+    position: absolute;
+    visibility: hidden;
+    background: white;
+    border-radius: 8px;
+}
+
+.card{
+    position: absolute;
+    font-weight: bold;
+    -webkit-transition: z-index 0.15s;
+    -moz-transition: z-index 0.15s;
+    -o-transition: z-index 0.15s;
+    -ms-transition: z-index 0.15s;
+    transition: z-index 0.15s;
+    
+    /*    
+    -webkit-transition: top 0.1s;
+    -moz-transition: top 0.1s;
+    -o-transition: top 0.1s;
+    -ms-transition: top 0.1s;
+    transition: top 0.1s;
+
+    -webkit-transition: left 0.01s;
+    -moz-transition: left 0.01s;
+    -o-transition: left 0.01s;
+    -ms-transition: left 0.01s;
+    transition: left 0.01s;
+    */
+    
+    color: white;
+    
+    background: -moz-linear-gradient( hsla(35, 62%, 85%, 0.85), hsla(205, 87%, 30%, 0.9));
+    background: -o-linear-gradient( hsla(35, 62%, 85%, 0.85), hsla(205, 87%, 30%, 0.9));
+    background: -webkit-linear-gradient( hsla(35, 62%, 85%, 0.85), hsla(205, 87%, 30%, 0.9));
+    background: -ms-linear-gradient( hsla(35, 62%, 85%, 0.85), hsla(205, 87%, 30%, 0.9));
+    background: linear-gradient( hsla(35, 62%, 85%, 0.85), hsla(205, 87%, 30%, 0.9));    
+}
+
+a:vistied{
+    color: white;
+}
