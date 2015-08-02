@@ -19,7 +19,6 @@ window.onload = function(){
             S(this).opacity = 0;
         };        
     }
-
 makeDraggable(O("note"));
 //=================main code goes here================
 //instantiate sitesapi
