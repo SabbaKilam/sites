@@ -539,15 +539,15 @@ function sharpenBackground(){
 }
 //-------------------------------------
 function blurBackground(){
-    S("groups").webkitFilter = "blur(2px)";
-    S("groups").mozFilter ="blur(2px)";
-    S("groups").oFilter = "blur(2px)";
-    S("groups").msFilter = "blur(2px)";
-    S("groups").filter = "blur(2px)";
+    S("groups").webkitFilter = "blur(1.2px)";
+    S("groups").mozFilter ="blur(1.2px)";
+    S("groups").oFilter = "blur(1.2px)";
+    S("groups").msFilter = "blur(1.2px)";
+    S("groups").filter = "blur(1.2px)";
 
-    S("content").webkitFilter = "blur(2px)";
-    S("content").mozFilter = "blur(2px)";
-    S("content").oFilter = "blur(2px)";
-    S("content").msFilter = "blur(2px)";
-    S("content").filter = "blur(2px)";
+    S("content").webkitFilter = "blur(1.2px)";
+    S("content").mozFilter = "blur(1.2px)";
+    S("content").oFilter = "blur(1.2px)";
+    S("content").msFilter = "blur(1.2px)";
+    S("content").filter = "blur(1.2px)";
 }
