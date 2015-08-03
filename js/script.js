@@ -19,6 +19,7 @@ window.onload = function(){
             S(this).opacity = 0;
         };        
     }
+  
 makeDraggable(O("note"));
 //=================main code goes here================
 //instantiate sitesapi
@@ -113,6 +114,7 @@ function processCsv(rawData){
             a.appendChild(img);
             a.appendChild(crlf);
             a.setAttribute("href", webLink );
+            a.setAttribute("target","_blank");// forces anchor to open a new tab
             S(a).textDecoration = "none";
             S(a).color = "lightgray";
             a.appendChild(text);
@@ -141,11 +143,11 @@ function processCsv(rawData){
             cardObject.note = title +"\n"+ "Notes: ";
             cardDeck.push(cardObject);
             
-
             content.appendChild(c);
             makeDraggable(c);
-        }//==
-        
+
+        }//==END of loop creating cards and cardDeck==
+
         //----helpers-------
         function createACard(i){
         }
@@ -168,7 +170,8 @@ function processCsv(rawData){
             } 
         }
         //---------------------
-        if(wireHandlers){wireHandlers()}; 
+        if(wireHandlers){wireHandlers()};
+        //---------------------------       
     }//==END of buildGui()==    
     //-----------------unit tests----------------------
     function doCsvTests(){
@@ -554,3 +557,5 @@ function blurBackground(){
     S("content").msFilter = "blur(1.2px)";
     S("content").filter = "blur(1.2px)";
 }
+//----try to override anchor defaults====
+
