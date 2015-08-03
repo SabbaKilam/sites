@@ -114,6 +114,7 @@ function processCsv(rawData){
             a.appendChild(img);
             a.appendChild(crlf);
             a.setAttribute("href", webLink );
+            a.setAttribute("class","anchor");
             a.setAttribute("target","_blank");// forces anchor to open a new tab
             S(a).textDecoration = "none";
             S(a).color = "lightgray";
@@ -192,13 +193,13 @@ function processCsv(rawData){
     //-------------------------------
     function setEventHandlers(callback){
         cardDeck.forEach(function(e,i,a){
-            e.card.addEventListener("mouseover", function(){
+            e.card.addEventListener("mouseover", function(){                
                 if(inMotion){return}
                 inMotion = true;
                 fastSlow();    
                 S(e.card).cursor = "move";
                 S(e.card).boxShadow = "2px 2px 2px hsla(203, 86%, 42%, 0.8)";
-                S(e.card).border = "1px solid hsla(203, 86%, 42%, 1.00)";                
+                S(e.card).border = "1px solid hsla(203, 86%, 42%, 1.00)";                 
                 S(e.card).width = (e.card.offsetWidth - 30) + "px";
                 S(e.card).height = (e.card.offsetHeight - 25) + "px";                
                 cardDeck.forEach(function(f){S(f.card).zIndex = 0;}); 
@@ -229,6 +230,7 @@ function processCsv(rawData){
                 S(e.card).cursor = "move";
             });
         });
+
         //------------------------------------
         cardDeck.forEach(function(m,i,a){
             m.card.addEventListener("dblclick", function(e){                
@@ -261,6 +263,18 @@ function processCsv(rawData){
                     //===================================
                 }                
             },false);
+        });
+        //-------------------------------
+        var anchors = C("anchor");
+        anchors.forEach(function(a,i,array){
+            a.addEventListener("mouseover",function(){
+                S(this).color = "white";
+                S(this).fontStyle = "italic"
+            });
+            a.addEventListener("mouseout",function(){
+                S(this).color = "lightgray";
+                S(this).fontStyle = "normal"
+            })            
         });
          //------------------
             O("note").addEventListener("mousedown",function(e){
